@@ -1,11 +1,4 @@
-#http://www.google.com/finance/info?q=NASDAQ%3aSTO:VOLV-B
-import time,sys,socket,nmap, pyHook
-
-def OnKeyboardEvent:
-	
-	
-	
-h = pyHook.HookManager()
-h.keyDown = onKeyboardEvent
-h.hookKeyboard()
-pythoncom.PumpMessages
+from yahoo_finance import Share
+yahoo = Share('VOLV-B.ST')
+print (yahoo.get_open())
+print (yahoo.get_price())
