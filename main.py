@@ -7,4 +7,4 @@ stockClasses = {}
 for name,code in allStocks.iteritems():
     if Share(code).get_price() != "None":
         stockClasses[name] = Stock(name,code)
-print( stockClasses["Volvo-B"].trend() )
+    stockClasses["Volvo-B"].trend()
